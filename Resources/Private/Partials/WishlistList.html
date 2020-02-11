@@ -1,0 +1,19 @@
+<div class="wishlist_products <f:if condition="{products}">notempty</f:if>">
+	<div class="wishlist_headline">{f:translate(key: 'list.headline')}</div>
+	<div class="wishlist_table">
+		<f:for each="{products}" as="productName" key="productId">
+			<div class="wishlist_product wishlist_product_{productId}" data-productid ="{productId}">
+				<div>
+					{productName}
+				</div>
+				<div>
+					<span class="btn_wishlist" data-productid ="{productId}" data-url="{f:uri.action(extensionName: 'AlmWishlist', controller: 'Ajax', pluginName: 'Ajax', action: 'wishlistRemove', pageType: '{settings.typeNumAjax}', arguments: {productId: '{productId}', productName: '{productName}'})}"><i class="fas fa-minus-circle"></i></span>
+				</div>
+			</div>
+		</f:for>
+	</div>
+	<div class="wishlist_form">
+		<f:link.typolink parameter="{settings.formPageUid}" class="btn btn-sm btn-primary btn_template_1">{f:translate(key: 'list.formlink')}</f:link.typolink>
+		<button type="button" class="btn btn-sm btn-primary btn_template_1 btn_wishlist_clear" data-url="{f:uri.action(extensionName: 'AlmWishlist', controller: 'Ajax', pluginName: 'Ajax', action: 'wishlistClear', pageType: '{settings.wishlist.typeNumAjax}')}">{f:translate(key: 'list.clearlist')}</button>
+	</div>
+</div>

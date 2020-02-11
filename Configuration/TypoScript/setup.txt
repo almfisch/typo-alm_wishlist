@@ -1,0 +1,39 @@
+plugin.tx_almwishlist {
+	settings {
+		typeNumAjax = {$plugin.tx_almwishlist.settings.typeNumAjax}
+		formPageUid = {$plugin.tx_almwishlist.settings.formPageUid}
+		formIdentifier =  {$plugin.tx_almwishlist.settings.formIdentifier}
+		formListBeforeElement = {$plugin.tx_almwishlist.settings.formListBeforeElement}
+	}
+	view {
+		templateRootPaths.0 = EXT:alm_wishlist/Resources/Private/Templates/
+		partialRootPaths.0 = EXT:alm_wishlist/Resources/Private/Partials/
+		layoutRootPaths.0 = EXT:alm_wishlist/Resources/Private/Layouts/
+		}
+	}
+}
+
+almwishlist_page_ajax = PAGE
+almwishlist_page_ajax {
+    typeNum = {$plugin.tx_almwishlist.settings.typeNumAjax}
+
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders.10.header = Content-type:application/html
+        xhtml_cleaning = 0
+        debug = 0
+        no_cache = 1
+        admPanel = 0
+    }
+
+    10 < tt_content.list.20.almwishlist_ajax
+}
+
+page {
+	includeCSS {
+		tx_almwishlist_interface = EXT:alm_wishlist/Resources/Public/Css/wishlist.css
+	}
+	includeJSFooter {
+		tx_almwishlist_interface = EXT:alm_wishlist/Resources/Public/JavaScript/wishlist.js
+	}
+}

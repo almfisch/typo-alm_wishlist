@@ -1,0 +1,8 @@
+plugin.tx_almwishlist {
+	settings {
+		typeNumAjax = 768357
+		formPageUid = 1
+		formIdentifier = inquiry_form
+		formListBeforeElement = end
+	}
+}

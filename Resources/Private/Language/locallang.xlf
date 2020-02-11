@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-10-14T11:36:30Z" product-name="alm_wishlist">
+		<header/>
+        <body>
+			<trans-unit id="list.headline">
+				<source>Wishlist</source>
+			</trans-unit>
+			<trans-unit id="list.formlink">
+				<source>Go To Form</source>
+			</trans-unit>
+			<trans-unit id="list.clearlist">
+				<source>Clear List</source>
+			</trans-unit>
+			<trans-unit id="form.headline">
+				<source>Products</source>
+			</trans-unit>
+			<trans-unit id="form.comment">
+				<source>Comment</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
