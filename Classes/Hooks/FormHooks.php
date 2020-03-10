@@ -82,7 +82,7 @@ class FormHooks
                     //$element->setLabel(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('form.comment', 'alm_wishlist'));
                     $element->setOptions(array('properties' => array(
                             'elementClassAttribute' => 'wishlist_item_comment',
-                            'placeholder' => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('form.comment', 'alm_wishlist'),
+                            'fluidAdditionalAttributes' => array('placeholder' => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('form.comment', 'alm_wishlist')),
                             'gridColumnClassAutoConfiguration' => array(
                                 'viewPorts' => array(
                                     'lg' => array('numbersOfColumnsToUse' => 11),

@@ -44,10 +44,14 @@ WISHLIST {
 
 ## Template Settings
 ```
+PageTemplate:
+
 <f:cObject typoscriptObjectPath="lib.theme.WISHLIST" />
 ```
 
 ```
+ProduktTemplate:
+
 <div class="theme_productdetail_btn">
 	<button type="button" class="btn btn-sm btn-primary btn_wishlist"
 		data-url="{f:uri.action(
@@ -62,6 +66,15 @@ WISHLIST {
 		Merkliste <i class="fas fa-plus-circle"></i>
 	</button>
 </div>
+```
+
+## SiteConfig (V9)
+```
+Add typeNumAjax to SiteConfig because it will be ignored if empty.
+
+PageTypeSuffix:
+  map:
+    'twl': 768357
 ```
 
 ## License

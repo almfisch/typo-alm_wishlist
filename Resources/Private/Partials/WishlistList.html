@@ -13,7 +13,7 @@
 		</f:for>
 	</div>
 	<div class="wishlist_form">
-		<f:link.typolink parameter="{settings.formPageUid}" class="btn btn-sm btn-primary btn_template_1">{f:translate(key: 'list.formlink')}</f:link.typolink>
+		<f:link.page pageUid="{settings.formPageUid}" noCache="true" class="btn btn-sm btn-primary btn_template_1">{f:translate(key: 'list.formlink')}</f:link.page>
 		<button type="button" class="btn btn-sm btn-primary btn_template_1 btn_wishlist_clear" data-url="{f:uri.action(extensionName: 'AlmWishlist', controller: 'Ajax', pluginName: 'Ajax', action: 'wishlistClear', pageType: '{settings.wishlist.typeNumAjax}')}">{f:translate(key: 'list.clearlist')}</button>
 	</div>
 </div>
